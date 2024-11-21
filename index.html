@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="style.css">
+<script src="final.js" defer></script>
+</head>
+<body>
+    <div class="weather-app">
+        <div class="container">
+            <h3 class="brand">The Weather Application</h3>
+            <div>
+                <h1 class="temp"><span></span></h1>
+                <div class="city-time">
+                    <h1></h1>
+                    <div class="countryName"></div>
+                    <small>
+                        <span class="time"></span>
+                        -
+                        <span class="date"></span>
+                    </small>
+                </div>
+                <div class="weather">
+                    <!-- <img src="./icons/day/cloudy_day_icon.png" alt="" class="icon-base-size icon"> -->
+                    <img src="" alt="" class="icon-base-size icon">
+                    <span class="condition"></span>
+                </div>
+            </div>
+        </div>
+        <div class="panel">
+            <form id="locationInput">
+                <input type="text" class="search" placeholder="Search Location....">
+                <button type="submit" class="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            <ul class="cities">
+                <li class="city">Porbandar</li>
+                <li class="city">London</li>
+                <li class="city">Paris</li>
+                <li class="city">Tokyo</li>
+            </ul>
+            <ul class="details">
+                <h4>Weather Detail</h4>
+                <li>
+                    <span>Cloudy</span>
+                    <span class="cloudy span">89%</span>
+                </li>
+                <li>
+                    <span>Humidity</span>
+                    <span class="humidity span">60%</span>
+                </li>
+                <li>
+                    <span>Wind</span>
+                    <span class="wind span">8km/hr</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

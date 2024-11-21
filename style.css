@@ -1,0 +1,330 @@
+.icon-base-size{
+    height: 3em;
+    width: 3em;
+}
+
+body{
+    margin: 0;
+    font-family: "Rubik", sans-serif;
+    background: #111;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+h1,h3{
+    font-weight: 400;
+}
+
+.brand{
+    font-size: 35px;
+    cursor: pointer;
+    transition: 0.5s ease-in;
+    font-family: "popins";
+}
+
+.brand:hover{
+    font-weight: 500;
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+.weather-app{
+    min-height: 100vh;
+    background-image: url(./images/day/snow.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fffefe;
+    position: relative;
+    transition: 500ms;
+    opacity: 1; 
+}
+
+
+.weather-app::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+}
+
+.container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    align-items: start;
+    flex-direction: column;
+    padding: 2em 3em 4em 3em;
+}
+
+.container > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.city-time,.temp,.weather{
+    margin: 0 1em;
+}
+
+.city-time h1{
+    margin: 0;
+    margin-bottom: 0.2em;
+    font-size: 3em;
+}
+
+.temp{
+    font-size: 7em;
+    margin: 0;
+}
+
+.weather img{
+    display: block;
+    margin: 0.7em 0;
+    transform: scale(1.2);
+}
+
+.panel{
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: rgba(110, 110, 110, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 1;
+    padding: 3em 2em;
+}
+
+.panel form{
+    margin-bottom: 3em;
+}
+
+.submit{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1.5em;
+    margin: 0;
+    border: none;
+    outline: none;
+    background:rgb(189, 98, 1);
+    color: white;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+.submit:hover{
+    background: white;
+    color: black;
+}
+
+.search{
+    background: none;
+    border: none;
+    width: 80%;
+    border-bottom: 1px rgb(203, 203, 203) solid;
+    padding: 0 1em 0.5em 0;
+    color: white;
+    font-size: 1.1em;
+}
+
+.search:focus{
+    outline: none;
+}
+
+.search::placeholder{
+    color: rgb(217, 217, 217);
+}
+
+.panel ul{
+    padding: 0 0 1em 0;
+    margin: 2em 0;
+    border-bottom: 1px rgb(203, 203, 203) solid;
+}
+
+.panel ul li{
+    color: rgb(203, 203, 203) ;
+    margin: 2.5em 0;
+}
+
+.panel ul h4{
+    margin:3em 0;
+    font-size: 20px;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.city{
+    display: block;
+    cursor: pointer;
+}
+
+.city:hover{
+    color: white;
+    font-weight: 500;
+    text-decoration: underline;
+    transition:underline 2s ease-in-out 0.2s
+}
+
+.details li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.details span:hover{
+    color: white;
+    font-weight: 500;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.span{
+    color: rgb(255, 255, 255);
+    font-size: 1.1em;
+}
+
+/* responsive */
+
+@media screen and (max-width:1180px)
+{
+    .panel{
+        width: 30%;
+    }
+}
+
+/* @media screen and (max-width:1000px)
+{
+    .panel,.container{
+        position: relative;
+        width: 100%;
+        top: initial;
+    }
+} */
+
+@media screen and (max-width:1000px)
+{
+    .panel,.container{
+        position: relative;
+        width: 100%;
+        top: initial;
+        /* height: 100%;  <-- Remove this line from the .container as it is causing it to take full height */
+    }
+    
+    /* Add the following lines to handle the container height based on its content */
+    .container {
+        height: auto; /* Container height adjusts automatically based on its content */
+        padding-bottom: 2em; /* Add some padding at the bottom if needed */
+    }
+
+    .panel {
+        height: auto; /* Ensure the panel takes the remaining height */
+    }
+}
+
+
+@media screen and (max-width:700px)
+{
+    html{
+     font-size: 12px;
+    }
+}
+
+@media screen and (max-width:520px)
+{
+    .weather-app{
+       min-height: 40em;
+    }
+    .city-time h1{
+        margin: 0;
+        margin-bottom: 0.2em;
+        font-size: 1em;
+    }
+    
+    .temp{
+        font-size: 4em;
+        margin: 0;
+    }
+    
+    .weather img{
+        display: block;
+        margin: 0.5em 0;
+    }
+
+}
+
+@media screen and (max-width:340px)
+{
+    .cities{
+        display: none;
+    }
+
+    .container > div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:start;
+        gap: 10px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Apply Animations */
+.weather-app {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.city-time h1 {
+    animation: slideIn 1s ease-in-out;
+}
+
+.temp {
+    animation: pulse 2s infinite;
+}
+
+.icon {
+    animation: fadeIn 2s ease-in-out, pulse 1.5s infinite alternate;
+}
+
+.city:hover, .details span:hover, .submit:hover {
+    animation: pulse 0.3s;
+}
+
+/* Button Animations */
+.submit {
+    animation: fadeIn 1s ease-in-out 0.5s;
+}
+
+.panel ul li {
+    animation: fadeIn 1s ease-in-out 0.5s;
+}
