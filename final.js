@@ -1,4 +1,4 @@
-let api = "597cbc6333384e9dbaf40925240908";
+let API_KEY = "597cbc6333384e9dbaf40925240908";
 let app = document.querySelector(".weather-app");
 let cities_ul = document.querySelector(".cities");
 let city_lis = document.querySelectorAll(".city");
@@ -21,7 +21,7 @@ let timeOutput = document.querySelector(".time");
 let dateOutput = document.querySelector(".date");
 let city_name;
 
-const baseURL = `http://api.weatherapi.com/v1/current.json?key=${api}&q=`;
+const baseURL = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=`;
 
 navigator.geolocation.getCurrentPosition(gotlocation, faillocation);
 
